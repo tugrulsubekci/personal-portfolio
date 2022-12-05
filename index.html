@@ -27,5 +27,65 @@
             </div>
         </div>
     </div>
+    <!---------------------about-------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/portre.png" class="portre">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. In mollis nunc sed
+                        id semper risus. Id cursus metus aliquam eleifend mi. Aenean pharetra
+                        magna ac placerat. Aliquet sagittis id consectetur purus ut faucibus
+                        pulvinar. In dictum non consectetur a erat.
+                    </p>
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Unity</span><br>Game and app development</li>
+                            <li><span>C#</span><br>Game and app development</li>
+                            <li><span>Blender</span><br>Basic modelling and animation</li>
+                            <li><span>Web Development</span><br>Knowledge of HTML,CSS and JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>10/2022 - Now</span><br>Sugar Technology</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2015 - 2021</span><br>Ankara University</li>
+                            <li><span>2022 - 2024</span><br>Istanbul University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for(tabLink of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+            for(tabContent of tabContents) {
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
 </body>
 </html>
